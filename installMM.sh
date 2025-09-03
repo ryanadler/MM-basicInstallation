@@ -16,7 +16,7 @@ echo
 
 cd
 
-cd bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
+bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 cd ~/MagicMirror/modules/
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
 git clone --depth=1 https://github.com/MMRIZE/MMM-CalendarExt3
