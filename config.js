@@ -33,31 +33,14 @@ let config = {
                            // as we have no usage, we  have no constraints on what this field holds
                            // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
 
-        logLevel: ["INFO", "LOG", "WARN", "ERROR", "DEBUG"], // Add "DEBUG" for even more logging
-        timeFormat: 24,
+        logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
+        timeFormat: 12,
         units: "imperial",
 
 		{
                         module: "MMM-WeatherEffects",
                         position: "fullscreen_above"
                 },
-//                {
-//                  module: "MMM-MyScoreboard",
-//                  position: "top_left",
-//                  config: {
-//                    viewStyle: "stackedWithLogos",
-//                    showPlayoffStatus: true,
-//                    sports: [
-//                      {
-//                        league: "FIFA_WOMENS_WORLD_CUP",
-//                      },
-//                            {
-//                                    league: "MLB",
-//                            },
-//                    ]
-//
-//                  }
-//                },
                 {
                         module: "clock",
                         position: "top_left"
@@ -87,7 +70,7 @@ let config = {
                         module: "calendar",             
                         header: "Events",
                         position: "top_left",
-                        hiddenOnStartup: true,                          
+                        hiddenOnStartup: true, //Populates eents from URL below, but hides superfluous display and allows Ext3 calendar to take over                          
                         config: {
                                 calendars: [                            
                                         {                               
