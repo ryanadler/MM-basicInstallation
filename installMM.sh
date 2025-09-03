@@ -14,6 +14,8 @@ apt-get install tree git vim nano -y
 echo "anscillary software installed"
 echo
 
+cd
+
 cd bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 cd ~/MagicMirror/modules/
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
