@@ -14,6 +14,12 @@ apt-get upgrade -y
 apt-get install tree git 
 exit
 
+also consider enabling SSH so you can make updates from another system and restart/watch the display update.
+
+commands:
+pm2 restart MagicMirror
+pm2 stop MagicMirror
+
 back down at your regular user level go to your home directory
 cd
 
