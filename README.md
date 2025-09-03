@@ -31,4 +31,10 @@ You'll notice there are two calendar extensions. I like ext3 personally, but hav
 
 weatehr effects and scoreboard are optional, and provide fun extras depending on the vibe you are going for.
 
+the configuration you use will be up to you. 
 
+my recommendation is that you use a fresh created google account/calendar. This allows you to pull from a calendar that's not directly tied to anyone specific, but then you can invite and get displays.
+
+more on this in the "Add Google Calendar" readme.
+
+a basic configuration is also posted for your use
