@@ -16,6 +16,9 @@ echo
 
 cd
 
+echo "Installing MM from sdetweil - This portion is not completely automated. Please answer questions as they appear"
+echo
+
 bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 cd ~/MagicMirror/modules/
 git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
@@ -37,8 +40,7 @@ echo
 cd ~/MagicMirror/config
 ts=$(date +%s)
 mv config.js config_$ts
-
-wget -O config.js "https://raw.githubusercontent.com/ryanadler/magicMirror/refs/heads/main/config.js"
+cp ~/MM-basicInstallation/config.js ~/MagicMirror/config/
 
 cd ~/MagicMirror/css
 echo "
