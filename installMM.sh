@@ -20,16 +20,22 @@ echo "Installing MM from sdetweil - This portion is not completely automated. Pl
 echo
 
 bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
-cd ~/MagicMirror/modules/
-git clone --depth=1 https://github.com/MMM-CalendarExt2/MMM-CalendarExt2
-git clone --depth=1 https://github.com/MMRIZE/MMM-CalendarExt3
+cd ~/MagicMirror/modules
+git clone https://github.com/MMRIZE/MMM-CalendarExt3
+cd MMM-CalendarExt3
+npm ci
+git submodule update --init --recursive
+cd ~/MagicMirror/modules
 git clone https://github.com/cgillinger/MMM-WeatherEffects
-git clone https://github.com/dathbe/MMM-MyScoreboard
+
+sleep 10
 
 ## temp stop MM
 pm2 stop MagicMirror
 
 echo "magic mirror installation complete"
+
+sleep 10
 
 pm2 stop MagicMirror
 
@@ -40,7 +46,7 @@ echo
 cd ~/MagicMirror/config
 ts=$(date +%s)
 mv config.js config_$ts
-cp ~/MM-basicInstallation/config.js ~/MagicMirror/config/
+cat ~/MM-basicInstallation/config.js > ~/MagicMirror/config/config.js
 
 cd ~/MagicMirror/css
 echo "
