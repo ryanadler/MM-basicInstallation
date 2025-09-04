@@ -45,8 +45,7 @@ let config = {
 		},
 		{
 			module: "clock",
-			showSunTimes: true,
-			showMoonTimes: "both",
+			showWeek: true,
 			position: "top_left"
 		},
 		{
@@ -55,6 +54,9 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
+				roundTemp: true,
+				showPrecipitationProbability: true,
+				showFeelsLike: false,
 				lat: 33.64400,
 				lon: -112.10997
 			}
@@ -66,6 +68,12 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",
+				roundTemp: true,
+				maxNumberOfDays: 3,
+				fade: false,
+				colored: true,
+				tableClass: "medium",
+				ignoreToday: true,
 				lat: 33.64400,
 				lon: -112.10997
 			}
@@ -83,7 +91,7 @@ let config = {
                                                 fetchInterval: 300000,
 						broadcastPastEvents: true,
                                                 symbol: "streamline-kameleon-color:pokeball", //symbols found at https://icon-sets.iconify.design/
-						url: "https://calendar.google.com/calendar/ical/email%40gmail.com/private-/basic.ics"
+						url: "https://calendar.google.com/calendar/ical/email%40domain.com/private-keyGoesHere/basic.ics" 
                                         },
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
@@ -105,6 +113,8 @@ let config = {
 				//weekIndex: 0,
 				//weeksInView: 3
 				mode: "month",
+				useWeather: false,
+				displayEndTime: true
 			}
 		},
 
@@ -113,3 +123,4 @@ let config = {
 
 //*************** DO NOT EDIT THE LINE BELOW ***************//
 if (typeof module !== "undefined") { module.exports = config; }
+
