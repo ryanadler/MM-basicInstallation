@@ -18,7 +18,7 @@ cd
 
 echo "Installing MM from sdetweil - This portion is not completely automated. Please answer questions as they appear"
 echo
-
+cd
 bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)"
 cd ~/MagicMirror/modules
 git clone https://github.com/MMRIZE/MMM-CalendarExt3
